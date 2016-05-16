@@ -9,6 +9,20 @@ p {
     font-size: 12px;
 }
 
+#title {
+    margin: 10px;
+}
+
+#social-likes {
+    padding-right: 10px;
+    margin: 10px;
+}
+
+#search {
+    padding: none;
+    width: 90%;
+}
+
 #map {
     height: 700px;
     margin-top: 10px;
@@ -16,6 +30,17 @@ p {
 }
 
 input {
-    width: 100%;
+    width: 300px;
     padding-left: 10px;
+    font-size: 12px;
+}
+
+.search-input {
+    max-width: 400px;
+    font-size: 12px;
+}
+
+.leaflet-control-search {
+	max-width: 400px;
+	font-size: 12px;
 }

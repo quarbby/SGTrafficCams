@@ -5,15 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Singapore Traffic Cameras</title>
         
+        <!-- This google maps one must always be on top -->
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js">
+        </script>  
+
         <script src="https://code.jquery.com/jquery.min.js"></script>
         
+        <!-- leaflet libraries -->
 	    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
 	    <script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
 
         <link rel="stylesheet" href="dist/leaflet.awesome-markers.css">
         <script src="dist/leaflet.awesome-markers.js"></script>
         <link rel="stylesheet" href="font-awesome-4.6.2/css/font-awesome.min.css">  
-
+        
+        <script src="js/leaflet-search.js"></script>
+        <link rel="stylesheet" href="css/leaflet-search.css">
+    
         <script async defer src="https://buttons.github.io/buttons.js"></script>
 
         <link rel="stylesheet" href="css/main.css"/>
@@ -31,13 +40,26 @@
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
         
-        <div class="container">
+        <div class="container" id="title">
             <h1>Singapore Traffic Cameras</h1>
             <p>Last updated: <span id="last-update"></span></p>
-            <div class="fb-like" data-href="http://penguin.dexots.com" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-	        <a class="github-button" href="https://github.com/quarbby/SGTrafficCams" data-count-href="/quarbby/SGTrafficCams/stargazers" data-count-api="/repos/quarbby/SGTrafficCams#stargazers_count" data-count-aria-label="# stargazers on GitHub">Star</a>
-
         </div>
+        
+        <div class="container" id="social-likes">
+            <div class="fb-like" data-href="http://penguin.dexots.com" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+	        <a class="github-button" href="https://github.com/quarbby/learning-web" data-count-href="/quarbby/learning-web/stargazers" data-count-api="/repos/quarbby/learning-web#stargazers_count" data-count-aria-label="# stargazers on GitHub">Star</a>
+        </div>
+
+        <!-- Search Bar -->
+        <!--
+        <div class="container">
+            <input type="text" id="search" oninput="searchAddress()" placeholder="Search street names">
+            <input type="text" id="search" placeholder="Search street names">
+            <ul>
+                <li>Test</li>
+            </ul>
+        </div>
+        -->
 
         <!-- Map -->
         <div class="container">
